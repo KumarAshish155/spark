@@ -49,6 +49,9 @@ RUN apt-get update && apt-get upgrade -y && \
 RUN chmod g+rwX /opt/bitnami
 RUN mkdir /.local && chmod g+rwX /.local
 
+RUN apt install net-tools
+
+
 COPY rootfs /
 RUN /opt/bitnami/scripts/spark/postunpack.sh
 RUN /opt/bitnami/scripts/java/postunpack.sh
