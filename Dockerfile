@@ -49,7 +49,7 @@ RUN apt-get update && apt-get upgrade -y && \
 RUN chmod g+rwX /opt/bitnami
 RUN mkdir /.local && chmod g+rwX /.local
 
-RUN apt install net-tools
+RUN apt-get install net-tools
 
 
 COPY rootfs /
