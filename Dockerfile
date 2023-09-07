@@ -67,6 +67,6 @@ ENV APP_VERSION="3.4.1" \
 
 WORKDIR /opt/bitnami/spark
 USER 1001
-ENTRYPOINT [ "/opt/bitnami/scripts/spark/entrypoint.sh" ]
+ENTRYPOINT [ "/opt/bitnami/scripts/spark/entrypoint.sh", "/opt/bitnami/spark/sbin/start-thriftserver.sh" ]
 CMD [ "/opt/bitnami/scripts/spark/run.sh" ]
 
